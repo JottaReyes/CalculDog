@@ -65,6 +65,8 @@ public class Calculator extends Activity {
 
         private static final String  PATH_ROBOTO_BOLD = "fonts/Roboto-Bold.ttf";
         private static final String PATH_ROBOTO_THIN = "fonts/Roboto-Thin.ttf";
+        private static final int ID_BOLD = 1;
+        private static final int ID_THIN = 2;
 
         public PlaceholderFragment() {
         }
@@ -79,10 +81,10 @@ public class Calculator extends Activity {
             edTxt_DogAge = (EditText) rootView.findViewById(R.id.editTextDogAge);
             txt_title = (TextView) rootView.findViewById(R.id.textViewTitle);
 
-            txt_title.setTypeface(changeTypeface(PATH_ROBOTO_BOLD, 1));
-            txt_result.setTypeface(changeTypeface(PATH_ROBOTO_THIN,2));
-            edTxt_DogAge.setTypeface(changeTypeface(PATH_ROBOTO_THIN,2));
-            btn_calculate.setTypeface(changeTypeface(PATH_ROBOTO_BOLD,1));
+            txt_title.setTypeface(changeTypeface(PATH_ROBOTO_BOLD, ID_BOLD));
+            txt_result.setTypeface(changeTypeface(PATH_ROBOTO_THIN,ID_THIN));
+            edTxt_DogAge.setTypeface(changeTypeface(PATH_ROBOTO_THIN, ID_THIN));
+            btn_calculate.setTypeface(changeTypeface(PATH_ROBOTO_BOLD,ID_BOLD));
 
             btn_calculate.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -107,9 +109,64 @@ public class Calculator extends Activity {
 
         private String calculateAge(String dogAge){
 
-                int age = Integer.parseInt(dogAge) * 4;
-                String result = Integer.toString(age);
-                return result;
+            int calcAge;
+
+            int age = Integer.parseInt(dogAge);
+
+            switch (age){
+                case 1:
+                    calcAge = 13;
+                    return Integer.toString(calcAge);
+                case 2:
+                    calcAge = 24;
+                    return Integer.toString(calcAge);
+                case 3:
+                    calcAge = 24;
+                    return Integer.toString(calcAge);
+                case 4:
+                    calcAge = 40;
+                    return Integer.toString(calcAge);
+                case 5:
+                    calcAge = 42;
+                    return Integer.toString(calcAge);
+                case 6:
+                    calcAge = 49;
+                    return Integer.toString(calcAge);
+                case 7:
+                    calcAge = 49;
+                    return Integer.toString(calcAge);
+                case 8:
+                    calcAge = 56;
+                    return Integer.toString(calcAge);
+                case 9:
+                    calcAge = 63;
+                    return Integer.toString(calcAge);
+                case 10:
+                    calcAge = 65;
+                    return Integer.toString(calcAge);
+                case 11:
+                    calcAge = 71;
+                    return Integer.toString(calcAge);
+                case 12:
+                    calcAge = 75;
+                    return Integer.toString(calcAge);
+                case 13:
+                    calcAge = 80;
+                    return Integer.toString(calcAge);
+                case 14:
+                    calcAge = 84;
+                    return Integer.toString(calcAge);
+                case 15:
+                    calcAge = 87;
+                    return Integer.toString(calcAge);
+                case 16:
+                    calcAge = 90;
+                    return Integer.toString(calcAge);
+                default:
+                    calcAge = age * 4;
+                    return Integer.toString(calcAge);
+
+            }
 
         }
 
