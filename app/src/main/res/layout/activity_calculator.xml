@@ -5,4 +5,7 @@
     android:layout_height="match_parent"
     tools:context=".Calculator"
     android:background="#FF8800"
-    tools:ignore="MergeRootFrame" />
+    tools:ignore="MergeRootFrame" >
+
+
+</FrameLayout>

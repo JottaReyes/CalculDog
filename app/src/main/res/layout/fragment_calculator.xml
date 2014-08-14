@@ -6,63 +6,90 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin"
-    android:background="#FFD980"
+    android:background="#E84C3D"
     tools:context=".Calculator$PlaceholderFragment">
 
-
-    <Button
-        android:layout_width="90dp"
-        android:layout_height="wrap_content"
-        android:text="@string/btn_calculate"
-        android:id="@+id/buttonCalculate"
-        android:background="#FFC641"
-        android:layout_centerVertical="true"
-         />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="@string/txt_title"
+        android:textColor="#F5BBB6"
         android:gravity="center"
         android:id="@+id/textViewTitle"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="33dp" />
-
-    <EditText
-        android:layout_width="90dp"
-        android:inputType="number"
-        android:layout_height="wrap_content"
-        android:text=""
-        android:id="@+id/editTextDogAge"
-        android:gravity="center"
-        android:maxLength="2"
-        android:layout_below="@+id/textViewTitle"
-        android:layout_alignLeft="@+id/buttonCalculate"
-        android:layout_alignStart="@+id/buttonCalculate"
-        android:layout_marginTop="42dp" />
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text=""
+        android:textColor="#F4BCB5"
         android:id="@+id/textViewResult"
         android:gravity="center"
-        android:layout_below="@+id/buttonCalculate"
+        android:layout_above="@+id/buttonCalculate"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="63dp" />
+        android:layout_marginBottom="60dp" />
 
     <ImageView
         android:layout_width="150dp"
         android:layout_height="170dp"
         android:id="@+id/imageView"
         android:src="@drawable/ic_dog1"
-        android:layout_above="@+id/textViewResult"
-        android:layout_alignRight="@+id/textViewTitle"
-        android:layout_alignEnd="@+id/textViewTitle"
-        android:layout_below="@+id/editTextDogAge" />
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="150dp"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/btn_calculate"
+        android:id="@+id/buttonCalculate"
+        android:background="#E84C3D"
+        android:layout_alignParentBottom="true"
+        android:textColor="#F4BCB5"
+        android:layout_centerHorizontal="true" />
+
+    <NumberPicker
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/agePicker"
+        android:layout_alignTop="@+id/imageView"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <NumberPicker
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/monthPicker"
+        android:layout_marginLeft="100dp"
+        android:layout_alignTop="@+id/agePicker" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/dog_years"
+        android:id="@+id/textViewYears"
+        android:layout_above="@+id/agePicker"
+        android:textColor="#F4BCB5"
+        android:layout_marginLeft="15dp"
+        android:layout_marginBottom="10dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Meses"
+        android:textColor="#F4BCB5"
+        android:id="@+id/textViewMonths"
+        android:layout_marginLeft="115dp"
+        android:layout_above="@+id/monthPicker"
+        android:layout_marginBottom="10dp" />
 
 
 </RelativeLayout>
+
+

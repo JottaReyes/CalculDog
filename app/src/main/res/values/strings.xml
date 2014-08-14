@@ -2,9 +2,12 @@
 <resources>
 
     <string name="app_name">CalculDog</string>
-    <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
     <string name="btn_calculate">Calcular</string>
     <string name="txt_title">Calcula la edad de tu perro en años humanos</string>
+    <string name="dog_years">Años</string>
+    <string name="appwidget_text">La edad de tu perro es: </string>
+    <string name="add_widget">Add widget</string>
+    <string name="configure">Configure</string>
 
 </resources>
